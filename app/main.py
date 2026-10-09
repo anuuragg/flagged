@@ -9,6 +9,7 @@ from sqlalchemy import text
 from contextlib import asynccontextmanager
 
 from app.api.routes.auth import router as auth_router
+from app.api.routes.login import router as login_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -20,6 +21,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan = lifespan)
 
 app.include_router(auth_router)
+app.include_router(login_router)
 
 
 

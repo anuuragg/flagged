@@ -6,4 +6,6 @@ psycopg[binary]
 alembic
 datetime
 uuid
-pip install argon2-cffi
+argon2-cffi
+pyjwt
+python-multipart
