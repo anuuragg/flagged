@@ -12,6 +12,8 @@ from app.api.routes.auth import router as auth_router
 from app.api.routes.login import router as login_router
 from app.api.routes.games import router as games_router
 
+from app.websocket.routes import router as websocket_router
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     import app.models
@@ -24,6 +26,8 @@ app = FastAPI(lifespan = lifespan)
 app.include_router(auth_router)
 app.include_router(login_router)
 app.include_router(games_router)
+
+app.include_router(websocket_router)
 
 
 

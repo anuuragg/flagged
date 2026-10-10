@@ -9,3 +9,4 @@ uuid
 argon2-cffi
 pyjwt
 python-multipart
+websockets
