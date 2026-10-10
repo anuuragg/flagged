@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from app.db.session import get_db
 from app.core.security import create_access_token
 from app.models.user import User
-from app.schemas.auth import LoginRequest, Token
+from app.schemas.auth import Token
 from app.core.security import verify_password
 
 
